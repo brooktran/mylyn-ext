@@ -138,8 +138,15 @@ class TaskLabelProvider extends ColumnLabelProvider {
 
   private static void initializeImages() {
     ImageRegistry imageRegistry = JFaceResources.getImageRegistry();
-    imageRegistry.put( DEFECT_ICON, Activator.getImageDescriptor( "/icons/defect.png" ) );
-    imageRegistry.put( ENHANCEMENT_ICON, Activator.getImageDescriptor( "/icons/enhancement.png" ) );
+    registeImage(DEFECT_ICON, "/icons/defect.png", imageRegistry );
+    registeImage(ENHANCEMENT_ICON,  "/icons/enhancement.png" , imageRegistry );
+
+   }
+
+  private static void registeImage( String key, String imageFilePath, ImageRegistry imageRegistry ){
+    if( imageRegistry.get( key ) == null ) {
+      imageRegistry.put( key, Activator.getImageDescriptor(imageFilePath) );
+    }
   }
 
 }

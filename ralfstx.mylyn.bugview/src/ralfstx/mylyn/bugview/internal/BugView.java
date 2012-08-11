@@ -49,14 +49,13 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.ui.part.ViewPart;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.Matcher;
 
 import ralfstx.mylyn.bugview.TaskMatchers;
 
 
-public class BugView extends ViewPart {
+public class BugView extends AbstractBugView {
 
   static final int COL_ID = 0;
   static final int COL_TITLE = 1;
@@ -86,16 +85,14 @@ public class BugView extends ViewPart {
     searchField.setFocus();
   }
 
-  void setActiveQuery( IRepositoryQuery query ) {
+  @Override
+  public void setActiveQuery( IRepositoryQuery query ) {
     activeQuery = query;
     updateIdColumnWidth();
     refreshViewer();
     refreshAutoSuggestions();
   }
 
-  IRepositoryQuery getActiveQuery() {
-    return activeQuery;
-  }
 
   private void createQuickFilterArea( Composite parent ) {
     final QuickFilterArea filterArea = new QuickFilterArea( parent, SWT.NONE );

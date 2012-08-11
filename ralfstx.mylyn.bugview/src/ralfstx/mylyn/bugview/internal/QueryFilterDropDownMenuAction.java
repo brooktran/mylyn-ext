@@ -23,9 +23,9 @@ import org.eclipse.swt.widgets.Menu;
 public class QueryFilterDropDownMenuAction extends Action implements IMenuCreator {
 
   private Menu dropDownMenu;
-  private final BugView bugView;
+  private final IBugView bugView;
 
-  public QueryFilterDropDownMenuAction( BugView bugView ) {
+  public QueryFilterDropDownMenuAction( IBugView bugView ) {
     super();
     this.bugView = bugView;
     setText( "Select query ..." );
