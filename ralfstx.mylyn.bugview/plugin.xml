@@ -12,6 +12,14 @@
             name="Bugs"
             restorable="true">
       </view>
+      <view
+            category="org.eclipse.mylyn.ui"
+            class="ralfstx.mylyn.bugview.TaskTreeView"
+            icon="icons/tasktreeview.gif"
+            id="ralfstx.mylyn.bugview.task.tree.view"
+            name="TaskTreeView"
+            restorable="true">
+      </view>
    </extension>
 
 </plugin>

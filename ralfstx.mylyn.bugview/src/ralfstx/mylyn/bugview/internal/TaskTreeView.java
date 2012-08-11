@@ -46,7 +46,7 @@ import ralfstx.mylyn.bugview.TaskMatchers;
  * @author Brook Tran. Email: <a href="mailto:Brook.Tran.C@gmail.com">Brook.Tran.C@gmail.com</a>
  * @since  2012-8-11 created
  */
-public class BugTreeView extends AbstractBugView {
+public class TaskTreeView extends AbstractBugView {
   static final int COL_ID = 0;
   static final int COL_TITLE = 1;
 
